@@ -364,5 +364,11 @@
       "object": "PA0001_HANA",
       "schema": "Z_S4_310"
     }
+  },
+  "S_MARD_HANA_TABLE": {
+    "target": {
+      "object": "MARD_HANA_TABLE",
+      "schema": "Z_S4_310"
+    }
   }
 }
