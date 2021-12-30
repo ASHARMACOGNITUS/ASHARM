@@ -97,7 +97,7 @@
       <descriptions defaultDescription="ERNAM"/>
       <keyMapping columnObjectName="Projection_1" columnName="ERNAM"/>
     </attribute>
-    <attribute id="ZINCIDENT" order="2" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZINCIDENT" order="2" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="ZINCDESCRIPTION">
       <descriptions defaultDescription="ZINCIDENT"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZINCIDENT"/>
     </attribute>
@@ -109,7 +109,7 @@
       <descriptions defaultDescription="QMART"/>
       <keyMapping columnObjectName="Projection_1" columnName="QMART"/>
     </attribute>
-    <attribute id="MATNR" order="5" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MATNR" order="5" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="MAKTG">
       <descriptions defaultDescription="MATNR"/>
       <keyMapping columnObjectName="Projection_1" columnName="MATNR"/>
     </attribute>
@@ -237,7 +237,7 @@
       <descriptions defaultDescription="WERKS"/>
       <keyMapping columnObjectName="Projection_1" columnName="WERKS"/>
     </attribute>
-    <attribute id="MATKL" order="37" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MATKL" order="37" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="WGBEZ60">
       <descriptions defaultDescription="MATKL"/>
       <keyMapping columnObjectName="Projection_1" columnName="MATKL"/>
     </attribute>
