@@ -4,5 +4,17 @@
       "object": "MAKT",
       "schema": "G_S4_DEV"
     }
+  },
+  "S_ZCV_LT_OUTBOUND_TABLE": {
+    "target": {
+      "object": "ZCV_LT_OUTBOUND_TABLE",
+      "schema": "AB46162D0FA04487BA7EDB704952BA59"
+    }
+  },
+  "S_ZCV_LT_INBOUND_TABLE": {
+    "target": {
+      "object": "ZCV_LT_INBOUND_TABLE",
+      "schema": "AB46162D0FA04487BA7EDB704952BA59"
+    }
   }
 }
