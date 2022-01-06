@@ -86,6 +86,8 @@
       <viewAttribute id="RETME"/>
       <viewAttribute id="STPRS"/>
       <viewAttribute id="LFIMG"/>
+    
+      <viewAttribute id="LABOR"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_TABLE1"/>
@@ -352,6 +354,11 @@
     <attribute id="WGBEZ60" order="65" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WGBEZ60"/>
       <keyMapping columnObjectName="Projection_1" columnName="WGBEZ60"/>
+    </attribute>
+  
+    <attribute id="LABOR" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="LABOR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="LABOR"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

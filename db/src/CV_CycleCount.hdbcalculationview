@@ -413,6 +413,27 @@
     <calculatedViewAttributes/>
     <input node="S_PI_IT_BIZ_HANA"/>
   </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="MATERIAL" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="MATIDC22"/>
+      <viewAttribute id="MATIDX16"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="MATID_MAP">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDC22" source="MATIDC22"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDX16" source="MATIDX16"/>
+    </input>
+    <input node="MATKEY">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATID" source="MATID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDC22" source="MATID"/>
+    </input>
+    <joinAttribute name="MATIDC22"/>
+  </calculationView>
   <calculationView xsi:type="Calculation:ProjectionView" id="PAR_BIZ">
     <viewAttributes>
       <viewAttribute id="GUIDDOC"/>
@@ -594,27 +615,6 @@
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="S_MATKEY_HANA"/>
-  </calculationView>
-  <calculationView xsi:type="Calculation:JoinView" id="MATERIAL" cardinality="CN_N" joinType="inner">
-    <viewAttributes>
-      <viewAttribute id="MANDT"/>
-      <viewAttribute id="MATIDC22"/>
-      <viewAttribute id="MATIDX16"/>
-      <viewAttribute id="MATNR"/>
-      <viewAttribute id="MATID"/>
-    </viewAttributes>
-    <calculatedViewAttributes/>
-    <input node="MATID_MAP">
-      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDC22" source="MATIDC22"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDX16" source="MATIDX16"/>
-    </input>
-    <input node="MATKEY">
-      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="MATID" source="MATID"/>
-      <mapping xsi:type="Calculation:AttributeMapping" target="MATIDC22" source="MATID"/>
-    </input>
-    <joinAttribute name="MATIDC22"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="PAR_JOIN">
@@ -944,6 +944,18 @@
       <upperLeftCorner x="757" y="696"/>
       <rectangleSize height="30" width="160"/>
     </shape>
+    <shape expanded="true" modelObjectName="MATERIAL" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="540" y="696"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="MATID_MAP" modelObjectNameSpace="MATERIAL" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="139"/>
+    </shape>
+    <shape modelObjectName="MATKEY" modelObjectNameSpace="MATERIAL" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="124"/>
+    </shape>
   
     <shape expanded="true" modelObjectName="PAR_BIZ" modelObjectNameSpace="CalculationView">
       <upperLeftCorner x="323" y="376"/>
@@ -969,18 +981,6 @@
     <shape expanded="true" modelObjectName="MATKEY" modelObjectNameSpace="CalculationView">
       <upperLeftCorner x="418" y="856"/>
       <rectangleSize height="30" width="160"/>
-    </shape>
-    <shape expanded="true" modelObjectName="MATERIAL" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="540" y="696"/>
-      <rectangleSize height="30" width="160"/>
-    </shape>
-    <shape modelObjectName="MATID_MAP" modelObjectNameSpace="MATERIAL" modelObjectType="JoinNodeInput">
-      <upperLeftCorner x="20" y="30"/>
-      <rectangleSize width="139"/>
-    </shape>
-    <shape modelObjectName="MATKEY" modelObjectNameSpace="MATERIAL" modelObjectType="JoinNodeInput">
-      <upperLeftCorner x="320" y="30"/>
-      <rectangleSize width="124"/>
     </shape></shapes>
 </layout>
 </Calculation:scenario>
