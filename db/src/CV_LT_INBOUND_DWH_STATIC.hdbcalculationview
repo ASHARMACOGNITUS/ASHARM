@@ -88,6 +88,11 @@
       <viewAttribute id="STPRS"/>
     
       <viewAttribute id="LABOR"/>
+    
+      <viewAttribute id="ZWADAT"/>
+      <viewAttribute id="ZREQDAT"/>
+    
+      <viewAttribute id="Datediff"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_TABLE1"/>
@@ -362,7 +367,18 @@
   
     <attribute id="LABOR" order="76" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LABOR"/>
+  
       <keyMapping columnObjectName="Projection_1" columnName="LABOR"/>
+  
+    </attribute>
+  
+    <attribute id="ZWADAT" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZWADAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZWADAT"/>
+    </attribute>
+    <attribute id="ZREQDAT" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZREQDAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZREQDAT"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
@@ -402,6 +418,11 @@
     <measure id="STPRS" order="75" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="STPRS"/>
       <measureMapping columnObjectName="Projection_1" columnName="STPRS"/>
+    </measure>
+  
+    <measure id="Datediff" order="79" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Datediff"/>
+      <measureMapping columnObjectName="Projection_1" columnName="Datediff"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>
