@@ -13,14 +13,14 @@
   <DataSource id="S_PI_IT_BIZ_HANA">
     <resourceUri>S_PI_IT_BIZ_HANA</resourceUri>
   </DataSource>
-  <DataSource id="S_PI_PAR_BIZ_HANA">
-    <resourceUri>S_PI_PAR_BIZ_HANA</resourceUri>
-  </DataSource>
   <DataSource id="S_MATID_MAP_HANA">
     <resourceUri>S_MATID_MAP_HANA</resourceUri>
   </DataSource>
   <DataSource id="S_MATKEY_HANA">
     <resourceUri>S_MATKEY_HANA</resourceUri>
+  </DataSource>
+  <DataSource id="S_PI_PAR_BIZ_HANA">
+    <resourceUri>S_PI_PAR_BIZ_HANA</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
@@ -434,6 +434,23 @@
     </input>
     <joinAttribute name="MATIDC22"/>
   </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="MATID_MAP">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="MATIDC22"/>
+      <viewAttribute id="MATIDX16"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="S_MATID_MAP_HANA"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="MATKEY">
+    <viewAttributes>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="MATID"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="S_MATKEY_HANA"/>
+  </calculationView>
   <calculationView xsi:type="Calculation:ProjectionView" id="PAR_BIZ">
     <viewAttributes>
       <viewAttribute id="GUIDDOC"/>
@@ -598,23 +615,6 @@
     <joinAttribute name="ITEMNO"/>
     <joinAttribute name="ITEMTYPE"/>
     <joinAttribute name="CHANGESEQ"/>
-  </calculationView>
-  <calculationView xsi:type="Calculation:ProjectionView" id="MATID_MAP">
-    <viewAttributes>
-      <viewAttribute id="MANDT"/>
-      <viewAttribute id="MATIDC22"/>
-      <viewAttribute id="MATIDX16"/>
-    </viewAttributes>
-    <calculatedViewAttributes/>
-    <input node="S_MATID_MAP_HANA"/>
-  </calculationView>
-  <calculationView xsi:type="Calculation:ProjectionView" id="MATKEY">
-    <viewAttributes>
-      <viewAttribute id="MATNR"/>
-      <viewAttribute id="MATID"/>
-    </viewAttributes>
-    <calculatedViewAttributes/>
-    <input node="S_MATKEY_HANA"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="PAR_JOIN">
@@ -957,6 +957,15 @@
       <rectangleSize width="124"/>
     </shape>
   
+    <shape expanded="true" modelObjectName="MATID_MAP" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="628" y="856"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="MATKEY" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="418" y="856"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  
     <shape expanded="true" modelObjectName="PAR_BIZ" modelObjectNameSpace="CalculationView">
       <upperLeftCorner x="323" y="376"/>
       <rectangleSize height="30" width="160"/>
@@ -972,15 +981,6 @@
     <shape modelObjectName="PAR_BIZ" modelObjectNameSpace="PAR_JOIN" modelObjectType="JoinNodeInput">
       <upperLeftCorner x="320" y="30"/>
       <rectangleSize width="141"/>
-    </shape>
-  
-    <shape expanded="true" modelObjectName="MATID_MAP" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="628" y="856"/>
-      <rectangleSize height="30" width="160"/>
-    </shape>
-    <shape expanded="true" modelObjectName="MATKEY" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="418" y="856"/>
-      <rectangleSize height="30" width="160"/>
     </shape></shapes>
 </layout>
 </Calculation:scenario>

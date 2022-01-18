@@ -1,6 +1,9 @@
 {
     "CC_ACCESS":{
         "object_owner":{
+            "roles" : [
+                "CCROLE"
+            ],
             "global_object_privileges":[
                 {
                     "name":"SQ1310",
@@ -17,6 +20,9 @@
             ]
         },
         "application_user":{
+            "roles" : [
+                "CCROLE"
+            ],
         "global_object_privileges":[
             {
                 "name":"SQ1310",

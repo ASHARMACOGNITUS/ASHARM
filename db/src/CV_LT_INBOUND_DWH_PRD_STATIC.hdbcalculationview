@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_LT_INBOUND_DWH_STATIC" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
-<descriptions defaultDescription="ZCV_LT_INBOUND_DWH_STATIC.hdbcalculationview"/>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_LT_INBOUND_DWH_PRD_STATIC" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_LT_INBOUND_DWH_PRD_STATIC.hdbcalculationview"/>
 <localVariables/>
 <variableMappings/>
 <dataSources>
-  <DataSource id="ZCV_LT_INBOUND_TABLE1">
-    <resourceUri>ZCV_LT_INBOUND_TABLE1</resourceUri>
+  <DataSource id="ZCV_LT_INBOUND_DWH_PRD_STATIC">
+    <resourceUri>ZCV_LT_INBOUND_DWH_PRD_STATIC</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
-  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+  <calculationView xsi:type="Calculation:ProjectionView" id="INBOUND_STATIC_TABLE">
     <viewAttributes>
       <viewAttribute id="ERNAM"/>
       <viewAttribute id="ZINCIDENT"/>
@@ -77,6 +77,9 @@
       <viewAttribute id="MTART"/>
       <viewAttribute id="MTBEZ"/>
       <viewAttribute id="WGBEZ60"/>
+      <viewAttribute id="LABOR"/>
+      <viewAttribute id="ZWADAT"/>
+      <viewAttribute id="ZREQDAT"/>
       <viewAttribute id="NTGEW"/>
       <viewAttribute id="VERPR"/>
       <viewAttribute id="LABST"/>
@@ -86,345 +89,332 @@
       <viewAttribute id="SPEME"/>
       <viewAttribute id="RETME"/>
       <viewAttribute id="STPRS"/>
-    
-      <viewAttribute id="LABOR"/>
-    
-      <viewAttribute id="ZWADAT"/>
-      <viewAttribute id="ZREQDAT"/>
-    
       <viewAttribute id="Datediff"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="ZCV_LT_INBOUND_TABLE1"/>
+    <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
   </calculationView>
 </calculationViews>
-<logicalModel id="Projection_1">
+<logicalModel id="INBOUND_STATIC_TABLE">
   <attributes>
     <attribute id="ERNAM" order="1" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ERNAM"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ERNAM"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ERNAM"/>
     </attribute>
-    <attribute id="ZINCIDENT" order="2" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="ZINCDESCRIPTION">
+    <attribute id="ZINCIDENT" order="2" descriptionColumnName="ZINCDESCRIPTION" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZINCIDENT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZINCIDENT"/>
     </attribute>
     <attribute id="QMNUM" order="3" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QMNUM"/>
-      <keyMapping columnObjectName="Projection_1" columnName="QMNUM"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QMNUM"/>
     </attribute>
     <attribute id="QMART" order="4" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QMART"/>
-      <keyMapping columnObjectName="Projection_1" columnName="QMART"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QMART"/>
     </attribute>
-    <attribute id="MATNR" order="5" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="MAKTG">
+    <attribute id="MATNR" order="5" descriptionColumnName="MAKTG" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MATNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MATNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MATNR"/>
     </attribute>
     <attribute id="ZINCDESCRIPTION" order="6" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCDESCRIPTION"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZINCDESCRIPTION"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZINCDESCRIPTION"/>
     </attribute>
     <attribute id="TPLNR" order="7" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="TPLNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="TPLNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="TPLNR"/>
     </attribute>
     <attribute id="ZREPLACEMENT" order="8" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREPLACEMENT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZREPLACEMENT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZREPLACEMENT"/>
     </attribute>
     <attribute id="ZRETURN" order="9" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZRETURN"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZRETURN"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZRETURN"/>
     </attribute>
     <attribute id="NAME1" order="10" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAME1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME1"/>
     </attribute>
     <attribute id="NAME2" order="11" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME2"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAME2"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME2"/>
     </attribute>
     <attribute id="STREET" order="12" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="STREET"/>
-      <keyMapping columnObjectName="Projection_1" columnName="STREET"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="STREET"/>
     </attribute>
     <attribute id="CITY" order="13" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CITY"/>
-      <keyMapping columnObjectName="Projection_1" columnName="CITY"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CITY"/>
     </attribute>
     <attribute id="REGION" order="14" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="REGION"/>
-      <keyMapping columnObjectName="Projection_1" columnName="REGION"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="REGION"/>
     </attribute>
     <attribute id="POSTCODE1" order="15" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="POSTCODE1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="POSTCODE1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="POSTCODE1"/>
     </attribute>
     <attribute id="COUNTRY" order="16" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="COUNTRY"/>
-      <keyMapping columnObjectName="Projection_1" columnName="COUNTRY"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="COUNTRY"/>
     </attribute>
     <attribute id="ZEMAIL" order="17" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZEMAIL"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZEMAIL"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZEMAIL"/>
     </attribute>
     <attribute id="EQUNR" order="18" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="EQUNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="EQUNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EQUNR"/>
     </attribute>
     <attribute id="ZINCIDENTLINE" order="19" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENTLINE"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZINCIDENTLINE"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZINCIDENTLINE"/>
     </attribute>
     <attribute id="QBAUTL" order="20" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QBAUTL"/>
-      <keyMapping columnObjectName="Projection_1" columnName="QBAUTL"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QBAUTL"/>
     </attribute>
     <attribute id="FLTYP" order="21" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="FLTYP"/>
-      <keyMapping columnObjectName="Projection_1" columnName="FLTYP"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="FLTYP"/>
     </attribute>
     <attribute id="TPLMA" order="22" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="TPLMA"/>
-      <keyMapping columnObjectName="Projection_1" columnName="TPLMA"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="TPLMA"/>
     </attribute>
     <attribute id="ADDRNUMBER" order="23" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ADDRNUMBER"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ADDRNUMBER"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ADDRNUMBER"/>
     </attribute>
     <attribute id="DATETO" order="24" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="DATETO"/>
-      <keyMapping columnObjectName="Projection_1" columnName="DATETO"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="DATETO"/>
     </attribute>
     <attribute id="TITLE" order="25" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="TITLE"/>
-      <keyMapping columnObjectName="Projection_1" columnName="TITLE"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="TITLE"/>
     </attribute>
     <attribute id="NAME3" order="26" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME3"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAME3"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME3"/>
     </attribute>
     <attribute id="NAME4" order="27" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME4"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAME4"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME4"/>
     </attribute>
     <attribute id="NAMETEXT" order="28" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAMETEXT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAMETEXT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAMETEXT"/>
     </attribute>
     <attribute id="NAMECO" order="29" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAMECO"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NAMECO"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAMECO"/>
     </attribute>
     <attribute id="CITY1" order="30" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CITY1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="CITY1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CITY1"/>
     </attribute>
     <attribute id="CITY2" order="31" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CITY2"/>
-      <keyMapping columnObjectName="Projection_1" columnName="CITY2"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CITY2"/>
     </attribute>
     <attribute id="CITYCODE" order="32" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CITYCODE"/>
-      <keyMapping columnObjectName="Projection_1" columnName="CITYCODE"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CITYCODE"/>
     </attribute>
     <attribute id="QMTXT" order="33" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QMTXT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="QMTXT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QMTXT"/>
     </attribute>
     <attribute id="ARTPR" order="34" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ARTPR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ARTPR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ARTPR"/>
     </attribute>
     <attribute id="PRIOK" order="35" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PRIOK"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PRIOK"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PRIOK"/>
     </attribute>
     <attribute id="WBSTK" order="36" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WBSTK"/>
-      <keyMapping columnObjectName="Projection_1" columnName="WBSTK"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="WBSTK"/>
     </attribute>
     <attribute id="WERKS" order="37" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WERKS"/>
-      <keyMapping columnObjectName="Projection_1" columnName="WERKS"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="WERKS"/>
     </attribute>
-    <attribute id="MATKL" order="38" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="WGBEZ60">
+    <attribute id="MATKL" order="38" descriptionColumnName="WGBEZ60" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MATKL"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MATKL"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MATKL"/>
     </attribute>
     <attribute id="MEINS" order="39" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MEINS"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MEINS"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MEINS"/>
     </attribute>
     <attribute id="LGORT" order="40" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LGORT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LGORT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LGORT"/>
     </attribute>
     <attribute id="CHARG" order="41" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CHARG"/>
-      <keyMapping columnObjectName="Projection_1" columnName="CHARG"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CHARG"/>
     </attribute>
     <attribute id="PSTYV" order="42" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PSTYV"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PSTYV"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PSTYV"/>
     </attribute>
     <attribute id="LFART" order="43" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LFART"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LFART"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LFART"/>
     </attribute>
     <attribute id="LDDAT" order="44" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LDDAT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LDDAT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LDDAT"/>
     </attribute>
     <attribute id="LFDAT" order="45" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LFDAT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LFDAT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LFDAT"/>
     </attribute>
     <attribute id="KODAT" order="46" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="KODAT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="KODAT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="KODAT"/>
     </attribute>
     <attribute id="VBELN" order="47" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="VBELN"/>
-      <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="VBELN"/>
     </attribute>
     <attribute id="POSNR" order="48" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="POSNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="POSNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="POSNR"/>
     </attribute>
     <attribute id="PERNR" order="49" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PERNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PERNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PERNR"/>
     </attribute>
     <attribute id="KOSTL" order="50" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="KOSTL"/>
-      <keyMapping columnObjectName="Projection_1" columnName="KOSTL"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="KOSTL"/>
     </attribute>
     <attribute id="USRIDLONG" order="51" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="USRIDLONG"/>
-      <keyMapping columnObjectName="Projection_1" columnName="USRIDLONG"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="USRIDLONG"/>
     </attribute>
     <attribute id="KOSTL_1" order="52" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="KOSTL_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="KOSTL_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="KOSTL_1"/>
     </attribute>
     <attribute id="PERNR_1" order="53" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PERNR_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PERNR_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PERNR_1"/>
     </attribute>
     <attribute id="NACHN_1" order="54" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NACHN_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="NACHN_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NACHN_1"/>
     </attribute>
     <attribute id="MIDNM_1" order="55" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MIDNM_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MIDNM_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MIDNM_1"/>
     </attribute>
     <attribute id="USRIDLONG_1" order="56" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="USRIDLONG_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="USRIDLONG_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="USRIDLONG_1"/>
     </attribute>
     <attribute id="SERNR" order="57" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SERNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SERNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SERNR"/>
     </attribute>
     <attribute id="ZEQUNR" order="58" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZEQUNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZEQUNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZEQUNR"/>
     </attribute>
     <attribute id="LTEXT" order="59" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LTEXT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LTEXT"/>
     </attribute>
     <attribute id="PRCTR" order="60" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PRCTR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="PRCTR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PRCTR"/>
     </attribute>
     <attribute id="LTEXT_1" order="61" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT_1"/>
-      <keyMapping columnObjectName="Projection_1" columnName="LTEXT_1"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LTEXT_1"/>
     </attribute>
     <attribute id="MAKTG" order="62" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MAKTG"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MAKTG"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MAKTG"/>
     </attribute>
     <attribute id="SPERR" order="63" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SPERR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SPERR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SPERR"/>
     </attribute>
     <attribute id="MTART" order="64" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTART"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MTART"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MTART"/>
     </attribute>
     <attribute id="MTBEZ" order="65" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTBEZ"/>
-      <keyMapping columnObjectName="Projection_1" columnName="MTBEZ"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MTBEZ"/>
     </attribute>
     <attribute id="WGBEZ60" order="66" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WGBEZ60"/>
-      <keyMapping columnObjectName="Projection_1" columnName="WGBEZ60"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="WGBEZ60"/>
     </attribute>
-  
-    <attribute id="LABOR" order="76" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LABOR" order="67" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LABOR"/>
-  
-      <keyMapping columnObjectName="Projection_1" columnName="LABOR"/>
-  
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LABOR"/>
     </attribute>
-  
-    <attribute id="ZWADAT" order="77" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZWADAT" order="68" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZWADAT"/>
-  
-      <keyMapping columnObjectName="Projection_1" columnName="ZWADAT"/>
-  
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZWADAT"/>
     </attribute>
-    <attribute id="ZREQDAT" order="78" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZREQDAT" order="69" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZREQDAT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZREQDAT"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="NTGEW" order="67" aggregationType="sum" measureType="simple">
+    <measure id="NTGEW" order="70" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="NTGEW"/>
-      <measureMapping columnObjectName="Projection_1" columnName="NTGEW"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NTGEW"/>
     </measure>
-    <measure id="VERPR" order="68" aggregationType="sum" measureType="simple">
+    <measure id="VERPR" order="71" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="VERPR"/>
-      <measureMapping columnObjectName="Projection_1" columnName="VERPR"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="VERPR"/>
     </measure>
-    <measure id="LABST" order="69" aggregationType="sum" measureType="simple">
+    <measure id="LABST" order="72" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LABST"/>
-      <measureMapping columnObjectName="Projection_1" columnName="LABST"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LABST"/>
     </measure>
-    <measure id="UMLME" order="70" aggregationType="sum" measureType="simple">
+    <measure id="UMLME" order="73" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="UMLME"/>
-      <measureMapping columnObjectName="Projection_1" columnName="UMLME"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="UMLME"/>
     </measure>
-    <measure id="EINME" order="71" aggregationType="sum" measureType="simple">
+    <measure id="EINME" order="74" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="EINME"/>
-      <measureMapping columnObjectName="Projection_1" columnName="EINME"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EINME"/>
     </measure>
-    <measure id="INSME" order="72" aggregationType="sum" measureType="simple">
+    <measure id="INSME" order="75" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="INSME"/>
-      <measureMapping columnObjectName="Projection_1" columnName="INSME"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="INSME"/>
     </measure>
-    <measure id="SPEME" order="73" aggregationType="sum" measureType="simple">
+    <measure id="SPEME" order="76" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="SPEME"/>
-      <measureMapping columnObjectName="Projection_1" columnName="SPEME"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SPEME"/>
     </measure>
-    <measure id="RETME" order="74" aggregationType="sum" measureType="simple">
+    <measure id="RETME" order="77" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="RETME"/>
-      <measureMapping columnObjectName="Projection_1" columnName="RETME"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="RETME"/>
     </measure>
-    <measure id="STPRS" order="75" aggregationType="sum" measureType="simple">
+    <measure id="STPRS" order="78" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="STPRS"/>
-      <measureMapping columnObjectName="Projection_1" columnName="STPRS"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="STPRS"/>
     </measure>
-  
     <measure id="Datediff" order="79" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="Datediff"/>
-      <measureMapping columnObjectName="Projection_1" columnName="Datediff"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Datediff"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>
@@ -436,8 +426,9 @@
     <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
       <upperLeftCorner x="40" y="85"/>
     </shape>
-    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="188" y="225"/>
+  
+    <shape expanded="true" modelObjectName="INBOUND_STATIC_TABLE" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="125" y="246"/>
       <rectangleSize height="30" width="160"/>
     </shape>
   </shapes>
