@@ -66,8 +66,6 @@
       <viewAttribute id="NACHN_1"/>
       <viewAttribute id="MIDNM_1"/>
       <viewAttribute id="USRIDLONG_1"/>
-      <viewAttribute id="SERNR"/>
-      <viewAttribute id="ZEQUNR"/>
       <viewAttribute id="LTEXT"/>
       <viewAttribute id="PRCTR"/>
       <viewAttribute id="LTEXT_1"/>
@@ -90,6 +88,9 @@
       <viewAttribute id="RETME"/>
       <viewAttribute id="STPRS"/>
       <viewAttribute id="LFIMG"/>
+    
+      <viewAttribute id="SERIAL"/>
+      <viewAttribute id="GERNR"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -317,102 +318,103 @@
       <descriptions defaultDescription="USRIDLONG_1"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="USRIDLONG_1"/>
     </attribute>
-    <attribute id="SERNR" order="56" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="SERNR"/>
-      <keyMapping columnObjectName="OUTBOUND" columnName="SERNR"/>
-    </attribute>
-    <attribute id="ZEQUNR" order="57" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="ZEQUNR"/>
-      <keyMapping columnObjectName="OUTBOUND" columnName="ZEQUNR"/>
-    </attribute>
-    <attribute id="LTEXT" order="58" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT" order="56" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="LTEXT"/>
     </attribute>
-    <attribute id="PRCTR" order="59" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="PRCTR" order="57" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PRCTR"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="PRCTR"/>
     </attribute>
-    <attribute id="LTEXT_1" order="60" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT_1" order="58" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT_1"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="LTEXT_1"/>
     </attribute>
-    <attribute id="MAKTG" order="61" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MAKTG" order="59" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MAKTG"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="MAKTG"/>
     </attribute>
-    <attribute id="SPERR" order="62" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="SPERR" order="60" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SPERR"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="SPERR"/>
     </attribute>
-    <attribute id="MTART" order="63" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTART" order="61" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTART"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="MTART"/>
     </attribute>
-    <attribute id="MTBEZ" order="64" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTBEZ" order="62" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTBEZ"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="MTBEZ"/>
     </attribute>
-    <attribute id="WGBEZ60" order="65" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="WGBEZ60" order="63" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WGBEZ60"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="WGBEZ60"/>
     </attribute>
-    <attribute id="LABOR" order="66" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LABOR" order="64" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LABOR"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="LABOR"/>
     </attribute>
-    <attribute id="ZWADAT" order="67" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZWADAT" order="65" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZWADAT"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="ZWADAT"/>
     </attribute>
-    <attribute id="ZREQDAT" order="68" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZREQDAT" order="66" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="ZREQDAT"/>
+    </attribute>
+  
+    <attribute id="GERNR" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GERNR"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="GERNR"/>
+    </attribute>
+    <attribute id="SERIAL" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERIAL"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="SERIAL"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="Datediff" order="69" aggregationType="sum" measureType="simple">
+    <measure id="Datediff" order="67" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="Datediff"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="Datediff"/>
     </measure>
-    <measure id="NTGEW" order="70" aggregationType="sum" measureType="simple">
+    <measure id="NTGEW" order="68" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="NTGEW"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="NTGEW"/>
     </measure>
-    <measure id="VERPR" order="71" aggregationType="sum" measureType="simple">
+    <measure id="VERPR" order="69" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="VERPR"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="VERPR"/>
     </measure>
-    <measure id="LABST" order="72" aggregationType="sum" measureType="simple">
+    <measure id="LABST" order="70" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LABST"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="LABST"/>
     </measure>
-    <measure id="UMLME" order="73" aggregationType="sum" measureType="simple">
+    <measure id="UMLME" order="71" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="UMLME"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="UMLME"/>
     </measure>
-    <measure id="EINME" order="74" aggregationType="sum" measureType="simple">
+    <measure id="EINME" order="72" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="EINME"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="EINME"/>
     </measure>
-    <measure id="INSME" order="75" aggregationType="sum" measureType="simple">
+    <measure id="INSME" order="73" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="INSME"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="INSME"/>
     </measure>
-    <measure id="SPEME" order="76" aggregationType="sum" measureType="simple">
+    <measure id="SPEME" order="74" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="SPEME"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="SPEME"/>
     </measure>
-    <measure id="RETME" order="77" aggregationType="sum" measureType="simple">
+    <measure id="RETME" order="75" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="RETME"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="RETME"/>
     </measure>
-    <measure id="STPRS" order="78" aggregationType="sum" measureType="simple">
+    <measure id="STPRS" order="76" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="STPRS"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="STPRS"/>
     </measure>
-    <measure id="LFIMG" order="79" aggregationType="sum" measureType="simple">
+    <measure id="LFIMG" order="77" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LFIMG"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="LFIMG"/>
     </measure>

@@ -12,6 +12,7 @@
   <calculationView xsi:type="Calculation:ProjectionView" id="INBOUND_STATIC_TABLE">
     <viewAttributes>
       <viewAttribute id="ERNAM"/>
+      <viewAttribute id="NTGEW"/>
       <viewAttribute id="ZINCIDENT"/>
       <viewAttribute id="QMNUM"/>
       <viewAttribute id="QMART"/>
@@ -28,7 +29,6 @@
       <viewAttribute id="POSTCODE1"/>
       <viewAttribute id="COUNTRY"/>
       <viewAttribute id="ZEMAIL"/>
-      <viewAttribute id="EQUNR"/>
       <viewAttribute id="ZINCIDENTLINE"/>
       <viewAttribute id="QBAUTL"/>
       <viewAttribute id="FLTYP"/>
@@ -80,7 +80,7 @@
       <viewAttribute id="LABOR"/>
       <viewAttribute id="ZWADAT"/>
       <viewAttribute id="ZREQDAT"/>
-      <viewAttribute id="NTGEW"/>
+      <viewAttribute id="SERIAL"/>
       <viewAttribute id="VERPR"/>
       <viewAttribute id="LABST"/>
       <viewAttribute id="UMLME"/>
@@ -101,73 +101,69 @@
       <descriptions defaultDescription="ERNAM"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ERNAM"/>
     </attribute>
-    <attribute id="ZINCIDENT" order="2" descriptionColumnName="ZINCDESCRIPTION" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZINCIDENT" order="3" descriptionColumnName="ZINCDESCRIPTION" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZINCIDENT"/>
     </attribute>
-    <attribute id="QMNUM" order="3" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="QMNUM" order="4" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QMNUM"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QMNUM"/>
     </attribute>
-    <attribute id="QMART" order="4" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="QMART" order="5" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="QMART"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="QMART"/>
     </attribute>
-    <attribute id="MATNR" order="5" descriptionColumnName="MAKTG" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MATNR" order="6" descriptionColumnName="MAKTG" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MATNR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MATNR"/>
     </attribute>
-    <attribute id="ZINCDESCRIPTION" order="6" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZINCDESCRIPTION" order="7" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCDESCRIPTION"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZINCDESCRIPTION"/>
     </attribute>
-    <attribute id="TPLNR" order="7" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="TPLNR" order="8" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="TPLNR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="TPLNR"/>
     </attribute>
-    <attribute id="ZREPLACEMENT" order="8" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZREPLACEMENT" order="9" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREPLACEMENT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZREPLACEMENT"/>
     </attribute>
-    <attribute id="ZRETURN" order="9" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZRETURN" order="10" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZRETURN"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZRETURN"/>
     </attribute>
-    <attribute id="NAME1" order="10" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="NAME1" order="11" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME1"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME1"/>
     </attribute>
-    <attribute id="NAME2" order="11" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="NAME2" order="12" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="NAME2"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NAME2"/>
     </attribute>
-    <attribute id="STREET" order="12" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="STREET" order="13" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="STREET"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="STREET"/>
     </attribute>
-    <attribute id="CITY" order="13" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="CITY" order="14" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="CITY"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="CITY"/>
     </attribute>
-    <attribute id="REGION" order="14" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="REGION" order="15" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="REGION"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="REGION"/>
     </attribute>
-    <attribute id="POSTCODE1" order="15" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="POSTCODE1" order="16" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="POSTCODE1"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="POSTCODE1"/>
     </attribute>
-    <attribute id="COUNTRY" order="16" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="COUNTRY" order="17" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="COUNTRY"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="COUNTRY"/>
     </attribute>
-    <attribute id="ZEMAIL" order="17" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZEMAIL" order="18" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZEMAIL"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZEMAIL"/>
-    </attribute>
-    <attribute id="EQUNR" order="18" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="EQUNR"/>
-      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EQUNR"/>
     </attribute>
     <attribute id="ZINCIDENTLINE" order="19" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENTLINE"/>
@@ -373,10 +369,14 @@
       <descriptions defaultDescription="ZREQDAT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZREQDAT"/>
     </attribute>
+    <attribute id="SERIAL" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERIAL"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SERIAL"/>
+    </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="NTGEW" order="70" aggregationType="sum" measureType="simple">
+    <measure id="NTGEW" order="2" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="NTGEW"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NTGEW"/>
     </measure>
