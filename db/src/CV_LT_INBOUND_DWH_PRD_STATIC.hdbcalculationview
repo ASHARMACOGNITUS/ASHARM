@@ -67,8 +67,6 @@
       <viewAttribute id="NACHN_1"/>
       <viewAttribute id="MIDNM_1"/>
       <viewAttribute id="USRIDLONG_1"/>
-      <viewAttribute id="SERNR"/>
-      <viewAttribute id="ZEQUNR"/>
       <viewAttribute id="LTEXT"/>
       <viewAttribute id="PRCTR"/>
       <viewAttribute id="LTEXT_1"/>
@@ -90,6 +88,10 @@
       <viewAttribute id="RETME"/>
       <viewAttribute id="STPRS"/>
       <viewAttribute id="Datediff"/>
+    
+      <viewAttribute id="GERNR"/>
+    
+      <viewAttribute id="EQUNR"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
@@ -317,61 +319,65 @@
       <descriptions defaultDescription="USRIDLONG_1"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="USRIDLONG_1"/>
     </attribute>
-    <attribute id="SERNR" order="57" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="SERNR"/>
-      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SERNR"/>
-    </attribute>
-    <attribute id="ZEQUNR" order="58" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="ZEQUNR"/>
-      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZEQUNR"/>
-    </attribute>
-    <attribute id="LTEXT" order="59" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT" order="57" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LTEXT"/>
     </attribute>
-    <attribute id="PRCTR" order="60" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="PRCTR" order="58" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PRCTR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PRCTR"/>
     </attribute>
-    <attribute id="LTEXT_1" order="61" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT_1" order="59" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT_1"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LTEXT_1"/>
     </attribute>
-    <attribute id="MAKTG" order="62" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MAKTG" order="60" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MAKTG"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MAKTG"/>
     </attribute>
-    <attribute id="SPERR" order="63" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="SPERR" order="61" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SPERR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SPERR"/>
     </attribute>
-    <attribute id="MTART" order="64" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTART" order="62" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTART"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MTART"/>
     </attribute>
-    <attribute id="MTBEZ" order="65" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTBEZ" order="63" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTBEZ"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="MTBEZ"/>
     </attribute>
-    <attribute id="WGBEZ60" order="66" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="WGBEZ60" order="64" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WGBEZ60"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="WGBEZ60"/>
     </attribute>
-    <attribute id="LABOR" order="67" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LABOR" order="65" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LABOR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LABOR"/>
     </attribute>
-    <attribute id="ZWADAT" order="68" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZWADAT" order="66" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZWADAT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZWADAT"/>
     </attribute>
-    <attribute id="ZREQDAT" order="69" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZREQDAT" order="67" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZREQDAT"/>
     </attribute>
-    <attribute id="SERIAL" order="70" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="SERIAL" order="68" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SERIAL"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SERIAL"/>
+    </attribute>
+  
+    <attribute id="GERNR" order="78" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GERNR"/>
+  
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="GERNR"/>
+  
+    </attribute>
+  
+    <attribute id="EQUNR" order="79" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EQUNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EQUNR"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
@@ -380,39 +386,39 @@
       <descriptions defaultDescription="NTGEW"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="NTGEW"/>
     </measure>
-    <measure id="VERPR" order="71" aggregationType="sum" measureType="simple">
+    <measure id="VERPR" order="69" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="VERPR"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="VERPR"/>
     </measure>
-    <measure id="LABST" order="72" aggregationType="sum" measureType="simple">
+    <measure id="LABST" order="70" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LABST"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LABST"/>
     </measure>
-    <measure id="UMLME" order="73" aggregationType="sum" measureType="simple">
+    <measure id="UMLME" order="71" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="UMLME"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="UMLME"/>
     </measure>
-    <measure id="EINME" order="74" aggregationType="sum" measureType="simple">
+    <measure id="EINME" order="72" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="EINME"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EINME"/>
     </measure>
-    <measure id="INSME" order="75" aggregationType="sum" measureType="simple">
+    <measure id="INSME" order="73" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="INSME"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="INSME"/>
     </measure>
-    <measure id="SPEME" order="76" aggregationType="sum" measureType="simple">
+    <measure id="SPEME" order="74" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="SPEME"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SPEME"/>
     </measure>
-    <measure id="RETME" order="77" aggregationType="sum" measureType="simple">
+    <measure id="RETME" order="75" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="RETME"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="RETME"/>
     </measure>
-    <measure id="STPRS" order="78" aggregationType="sum" measureType="simple">
+    <measure id="STPRS" order="76" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="STPRS"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="STPRS"/>
     </measure>
-    <measure id="Datediff" order="79" aggregationType="sum" measureType="simple">
+    <measure id="Datediff" order="77" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="Datediff"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Datediff"/>
     </measure>
