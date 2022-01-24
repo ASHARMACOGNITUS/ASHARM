@@ -91,6 +91,9 @@
       <viewAttribute id="SERIAL"/>
       <viewAttribute id="SERNR"/>
       <viewAttribute id="ZEQUNR"/>
+    
+      <viewAttribute id="Name"/>
+      <viewAttribute id="Material(unpadded)"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -365,11 +368,22 @@
   
     <attribute id="ZEQUNR" order="78" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZEQUNR"/>
+  
       <keyMapping columnObjectName="OUTBOUND" columnName="ZEQUNR"/>
+  
     </attribute>
     <attribute id="SERNR" order="79" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SERNR"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="SERNR"/>
+    </attribute>
+  
+    <attribute id="Material(unpadded)" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Material(unpadded)"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="Material(unpadded)"/>
+    </attribute>
+    <attribute id="Name" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="Name"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

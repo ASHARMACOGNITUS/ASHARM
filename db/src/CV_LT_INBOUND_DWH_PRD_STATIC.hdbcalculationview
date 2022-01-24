@@ -92,6 +92,9 @@
       <viewAttribute id="GERNR"/>
     
       <viewAttribute id="EQUNR"/>
+    
+      <viewAttribute id="Name"/>
+      <viewAttribute id="Material(unpadded)"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
@@ -377,7 +380,18 @@
   
     <attribute id="EQUNR" order="79" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="EQUNR"/>
+  
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="EQUNR"/>
+  
+    </attribute>
+  
+    <attribute id="Material(unpadded)" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Material(unpadded)"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Material(unpadded)"/>
+    </attribute>
+    <attribute id="Name" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Name"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
