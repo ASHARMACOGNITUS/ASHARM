@@ -94,6 +94,11 @@
     
       <viewAttribute id="Name"/>
       <viewAttribute id="Material(unpadded)"/>
+    
+      <viewAttribute id="ZPERNR"/>
+    
+      <viewAttribute id="VKORG"/>
+      <viewAttribute id="ZOUTBOUNDDEL"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -379,11 +384,22 @@
   
     <attribute id="Material(unpadded)" order="80" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Material(unpadded)"/>
+  
       <keyMapping columnObjectName="OUTBOUND" columnName="Material(unpadded)"/>
+  
     </attribute>
     <attribute id="Name" order="81" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Name"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="Name"/>
+    </attribute>
+  
+    <attribute id="ZOUTBOUNDDEL" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZOUTBOUNDDEL"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="ZOUTBOUNDDEL"/>
+    </attribute>
+    <attribute id="VKORG" order="83" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKORG"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="VKORG"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

@@ -95,6 +95,8 @@
     
       <viewAttribute id="Name"/>
       <viewAttribute id="Material(unpadded)"/>
+    
+      <viewAttribute id="ZPERNR"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
@@ -387,11 +389,18 @@
   
     <attribute id="Material(unpadded)" order="80" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Material(unpadded)"/>
+  
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Material(unpadded)"/>
+  
     </attribute>
     <attribute id="Name" order="81" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="Name"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Name"/>
+    </attribute>
+  
+    <attribute id="ZPERNR" order="82" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZPERNR"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZPERNR"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

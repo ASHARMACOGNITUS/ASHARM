@@ -369,7 +369,9 @@
   
     <attribute id="ZWADAT" order="77" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZWADAT"/>
+  
       <keyMapping columnObjectName="Projection_1" columnName="ZWADAT"/>
+  
     </attribute>
     <attribute id="ZREQDAT" order="78" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
