@@ -1,0 +1,8 @@
+{
+  "S_STOCK_IW01_HANA": {
+    "target": {
+      "object": "STOCK_IW01_HANA",
+      "schema": "Z_S4_310"
+    }
+  }
+}

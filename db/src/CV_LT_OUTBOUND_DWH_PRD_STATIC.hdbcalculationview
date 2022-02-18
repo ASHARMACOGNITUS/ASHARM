@@ -99,6 +99,9 @@
     
       <viewAttribute id="VKORG"/>
       <viewAttribute id="ZOUTBOUNDDEL"/>
+    
+      <viewAttribute id="ZSERNR"/>
+      <viewAttribute id="ZZEQUNR"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -395,11 +398,22 @@
   
     <attribute id="ZOUTBOUNDDEL" order="82" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZOUTBOUNDDEL"/>
+  
       <keyMapping columnObjectName="OUTBOUND" columnName="ZOUTBOUNDDEL"/>
+  
     </attribute>
     <attribute id="VKORG" order="83" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="VKORG"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="VKORG"/>
+    </attribute>
+  
+    <attribute id="ZZEQUNR" order="84" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZZEQUNR"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="ZZEQUNR"/>
+    </attribute>
+    <attribute id="ZSERNR" order="85" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZSERNR"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="ZSERNR"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
