@@ -100,6 +100,10 @@
     
       <viewAttribute id="ZGERNR"/>
       <viewAttribute id="ZZEQUNR"/>
+    
+      <viewAttribute id="PEINH"/>
+      <viewAttribute id="SALK3"/>
+      <viewAttribute id="LBKUM"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
@@ -460,6 +464,20 @@
     <measure id="Datediff" order="77" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="Datediff"/>
       <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="Datediff"/>
+    </measure>
+  
+    <measure id="PEINH" order="85" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PEINH"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="PEINH"/>
+    </measure>
+    <measure id="SALK3" order="86" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SALK3"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="SALK3"/>
+    </measure>
+  
+    <measure id="LBKUM" order="87" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LBKUM"/>
+      <measureMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="LBKUM"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>

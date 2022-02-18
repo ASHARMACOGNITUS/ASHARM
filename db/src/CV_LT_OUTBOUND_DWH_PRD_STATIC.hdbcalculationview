@@ -102,6 +102,10 @@
     
       <viewAttribute id="ZSERNR"/>
       <viewAttribute id="ZZEQUNR"/>
+    
+      <viewAttribute id="PEINH"/>
+      <viewAttribute id="SALK3"/>
+      <viewAttribute id="LBKUM"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -409,7 +413,9 @@
   
     <attribute id="ZZEQUNR" order="84" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZZEQUNR"/>
+  
       <keyMapping columnObjectName="OUTBOUND" columnName="ZZEQUNR"/>
+  
     </attribute>
     <attribute id="ZSERNR" order="85" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZSERNR"/>
@@ -461,6 +467,19 @@
     <measure id="LFIMG" order="76" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LFIMG"/>
       <measureMapping columnObjectName="OUTBOUND" columnName="LFIMG"/>
+    </measure>
+  
+    <measure id="PEINH" order="86" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PEINH"/>
+      <measureMapping columnObjectName="OUTBOUND" columnName="PEINH"/>
+    </measure>
+    <measure id="SALK3" order="87" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SALK3"/>
+      <measureMapping columnObjectName="OUTBOUND" columnName="SALK3"/>
+    </measure>
+    <measure id="LBKUM" order="88" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LBKUM"/>
+      <measureMapping columnObjectName="OUTBOUND" columnName="LBKUM"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>

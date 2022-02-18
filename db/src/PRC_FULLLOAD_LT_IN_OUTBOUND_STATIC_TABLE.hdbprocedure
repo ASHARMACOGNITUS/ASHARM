@@ -1,0 +1,6 @@
+PROCEDURE "PRC_FULLLOAD_LT_IN_OUTBOUND_STATIC_TABLE"
+AS
+BEGIN
+Select * from  "TARGET_ACDOCA - Universal Journal Entry Line Items";
+
+END
