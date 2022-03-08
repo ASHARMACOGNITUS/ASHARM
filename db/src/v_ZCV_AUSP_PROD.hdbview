@@ -1,0 +1,44 @@
+VIEW "V_ZCV_AUSP_PROD"  AS 
+Select 
+"OBJEK"
+,concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(concat(Concat(
+	"1",' '),IFNULL("2",'')),' '),IFNULL("3",'')),' '),IFNULL("DESC",'')),' '),IFNULL("SAPName_brand",'')),' '),IFNULL("ATWRT_brand",'')),' '),IFNULL("SAPName_cardtype",'')),' '),IFNULL("ATWRT_cardtype",'')),' ')
+	,IFNULL("SAPName_papertype",'')),' '),IFNULL("ATWRT_papertype",'')) AS "SAPCharacteristics"
+,"KLART"
+From 
+(Select "OBJEK"
+,"KLART"
+,"1"
+,String_agg("2",','order by "2" ASC) AS "2"
+,"3"
+,String_agg("4",','order by "4" ASC)   AS "DESC"
+,"SAPName_brand"
+,String_agg("ATWRT_brand",','order by "ATWRT_brand" ASC)   AS "ATWRT_brand"
+,"SAPName_cardtype"
+,String_agg("ATWRT_cardtype",','order by "ATWRT_cardtype" ASC)   AS "ATWRT_cardtype"
+,"SAPName_papertype"
+,String_agg("ATWRT_papertype",','order by "ATWRT_papertype" ASC)   AS "ATWRT_papertype"
+from 
+(select
+"OBJEK"
+,"KLART"
+,"sapname" AS "1" 
+,"ATWRT" AS "2"
+,"SAPName" AS "3"
+,"ATWRT_1" AS "4"
+,"SAPName_brand"
+,"ATWRT_brand"
+,"SAPName_cardtype"
+,"ATWRT_cardtype"
+,"SAPName_papertype"
+,"ATWRT_papertype"
+from "ZCV_AUSP_PRD"
+) XYZ
+Group by "OBJEK"
+,"KLART"
+,"1"
+,"3"
+,"SAPName_brand"
+,"SAPName_cardtype"
+,"SAPName_papertype"
+) ABC

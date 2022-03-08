@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_LT_OUTBOUND_DWH_STATIC" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
-<descriptions defaultDescription="CV_LT_OUTBOUND_DWH_STATIC.hdbcalculationview"/>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_LT_INBOUND_DWH_QUA_STATIC" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_LT_INBOUND_DWH_QUA_STATIC.hdbcalculationview"/>
 <localVariables/>
 <variableMappings/>
 <dataSources>
-  <DataSource id="ZCV_LT_OUTBOUND_TABLE1">
-    <resourceUri>ZCV_LT_OUTBOUND_TABLE1</resourceUri>
+  <DataSource id="ZCV_LT_INBOUND_QUA_STATIC">
+    <resourceUri>ZCV_LT_INBOUND_QUA_STATIC</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
@@ -28,8 +28,8 @@
       <viewAttribute id="POSTCODE1"/>
       <viewAttribute id="COUNTRY"/>
       <viewAttribute id="ZEMAIL"/>
-      <viewAttribute id="EQUNR"/>
       <viewAttribute id="ZINCIDENTLINE"/>
+      <viewAttribute id="QBAUTL"/>
       <viewAttribute id="FLTYP"/>
       <viewAttribute id="TPLMA"/>
       <viewAttribute id="ADDRNUMBER"/>
@@ -66,8 +66,6 @@
       <viewAttribute id="NACHN_1"/>
       <viewAttribute id="MIDNM_1"/>
       <viewAttribute id="USRIDLONG_1"/>
-      <viewAttribute id="SERNR"/>
-      <viewAttribute id="ZEQUNR"/>
       <viewAttribute id="LTEXT"/>
       <viewAttribute id="PRCTR"/>
       <viewAttribute id="LTEXT_1"/>
@@ -76,6 +74,20 @@
       <viewAttribute id="MTART"/>
       <viewAttribute id="MTBEZ"/>
       <viewAttribute id="WGBEZ60"/>
+      <viewAttribute id="LABOR"/>
+      <viewAttribute id="ZWADAT"/>
+      <viewAttribute id="ZREQDAT"/>
+      <viewAttribute id="SERIAL"/>
+      <viewAttribute id="GERNR"/>
+      <viewAttribute id="EQUNR"/>
+      <viewAttribute id="Material(unpadded)"/>
+      <viewAttribute id="Name"/>
+      <viewAttribute id="ZPERNR"/>
+      <viewAttribute id="REFDOCCAT"/>
+      <viewAttribute id="REFDOCNO"/>
+      <viewAttribute id="DOCNO"/>
+      <viewAttribute id="ZGERNR"/>
+      <viewAttribute id="ZZEQUNR"/>
       <viewAttribute id="NTGEW"/>
       <viewAttribute id="VERPR"/>
       <viewAttribute id="LABST"/>
@@ -85,19 +97,13 @@
       <viewAttribute id="SPEME"/>
       <viewAttribute id="RETME"/>
       <viewAttribute id="STPRS"/>
-      <viewAttribute id="LFIMG"/>
-    
-      <viewAttribute id="LABOR"/>
-    
-      <viewAttribute id="ZWADAT"/>
-      <viewAttribute id="ZREQDAT"/>
+      <viewAttribute id="PEINH"/>
+      <viewAttribute id="SALK3"/>
+      <viewAttribute id="LBKUM"/>
       <viewAttribute id="Datediff"/>
-    
-      <viewAttribute id="REFDOCCAT"/>
-      <viewAttribute id="REFDOCNO"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="ZCV_LT_OUTBOUND_TABLE1"/>
+    <input node="ZCV_LT_INBOUND_QUA_STATIC"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="Projection_1">
@@ -106,7 +112,7 @@
       <descriptions defaultDescription="ERNAM"/>
       <keyMapping columnObjectName="Projection_1" columnName="ERNAM"/>
     </attribute>
-    <attribute id="ZINCIDENT" order="2" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="ZINCDESCRIPTION">
+    <attribute id="ZINCIDENT" order="2" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENT"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZINCIDENT"/>
     </attribute>
@@ -118,7 +124,7 @@
       <descriptions defaultDescription="QMART"/>
       <keyMapping columnObjectName="Projection_1" columnName="QMART"/>
     </attribute>
-    <attribute id="MATNR" order="5" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="MAKTG">
+    <attribute id="MATNR" order="5" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MATNR"/>
       <keyMapping columnObjectName="Projection_1" columnName="MATNR"/>
     </attribute>
@@ -170,13 +176,13 @@
       <descriptions defaultDescription="ZEMAIL"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZEMAIL"/>
     </attribute>
-    <attribute id="EQUNR" order="18" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="EQUNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="EQUNR"/>
-    </attribute>
-    <attribute id="ZINCIDENTLINE" order="19" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZINCIDENTLINE" order="18" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZINCIDENTLINE"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZINCIDENTLINE"/>
+    </attribute>
+    <attribute id="QBAUTL" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="QBAUTL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="QBAUTL"/>
     </attribute>
     <attribute id="FLTYP" order="20" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="FLTYP"/>
@@ -246,7 +252,7 @@
       <descriptions defaultDescription="WERKS"/>
       <keyMapping columnObjectName="Projection_1" columnName="WERKS"/>
     </attribute>
-    <attribute id="MATKL" order="37" displayAttribute="false" attributeHierarchyActive="false" descriptionColumnName="WGBEZ60">
+    <attribute id="MATKL" order="37" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MATKL"/>
       <keyMapping columnObjectName="Projection_1" columnName="MATKL"/>
     </attribute>
@@ -322,118 +328,146 @@
       <descriptions defaultDescription="USRIDLONG_1"/>
       <keyMapping columnObjectName="Projection_1" columnName="USRIDLONG_1"/>
     </attribute>
-    <attribute id="SERNR" order="56" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="SERNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SERNR"/>
-    </attribute>
-    <attribute id="ZEQUNR" order="57" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="ZEQUNR"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZEQUNR"/>
-    </attribute>
-    <attribute id="LTEXT" order="58" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT" order="56" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT"/>
       <keyMapping columnObjectName="Projection_1" columnName="LTEXT"/>
     </attribute>
-    <attribute id="PRCTR" order="59" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="PRCTR" order="57" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="PRCTR"/>
       <keyMapping columnObjectName="Projection_1" columnName="PRCTR"/>
     </attribute>
-    <attribute id="LTEXT_1" order="60" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LTEXT_1" order="58" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LTEXT_1"/>
       <keyMapping columnObjectName="Projection_1" columnName="LTEXT_1"/>
     </attribute>
-    <attribute id="MAKTG" order="61" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MAKTG" order="59" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MAKTG"/>
       <keyMapping columnObjectName="Projection_1" columnName="MAKTG"/>
     </attribute>
-    <attribute id="SPERR" order="62" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="SPERR" order="60" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="SPERR"/>
       <keyMapping columnObjectName="Projection_1" columnName="SPERR"/>
     </attribute>
-    <attribute id="MTART" order="63" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTART" order="61" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTART"/>
       <keyMapping columnObjectName="Projection_1" columnName="MTART"/>
     </attribute>
-    <attribute id="MTBEZ" order="64" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="MTBEZ" order="62" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="MTBEZ"/>
       <keyMapping columnObjectName="Projection_1" columnName="MTBEZ"/>
     </attribute>
-    <attribute id="WGBEZ60" order="65" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="WGBEZ60" order="63" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="WGBEZ60"/>
       <keyMapping columnObjectName="Projection_1" columnName="WGBEZ60"/>
     </attribute>
-  
-    <attribute id="LABOR" order="76" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LABOR" order="64" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LABOR"/>
-  
       <keyMapping columnObjectName="Projection_1" columnName="LABOR"/>
-  
     </attribute>
-  
-    <attribute id="ZWADAT" order="77" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZWADAT" order="65" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZWADAT"/>
-  
       <keyMapping columnObjectName="Projection_1" columnName="ZWADAT"/>
-  
     </attribute>
-    <attribute id="ZREQDAT" order="78" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ZREQDAT" order="66" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZREQDAT"/>
     </attribute>
-  
-    <attribute id="REFDOCCAT" order="80" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="SERIAL" order="67" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SERIAL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SERIAL"/>
+    </attribute>
+    <attribute id="GERNR" order="68" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="GERNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="GERNR"/>
+    </attribute>
+    <attribute id="EQUNR" order="69" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EQUNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="EQUNR"/>
+    </attribute>
+    <attribute id="Material(unpadded)" order="70" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Material(unpadded)"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Material(unpadded)"/>
+    </attribute>
+    <attribute id="Name" order="71" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Name"/>
+      <keyMapping columnObjectName="Projection_1" columnName="Name"/>
+    </attribute>
+    <attribute id="ZPERNR" order="72" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZPERNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZPERNR"/>
+    </attribute>
+    <attribute id="REFDOCCAT" order="73" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="REFDOCCAT"/>
       <keyMapping columnObjectName="Projection_1" columnName="REFDOCCAT"/>
     </attribute>
-    <attribute id="REFDOCNO" order="81" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="REFDOCNO" order="74" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="REFDOCNO"/>
       <keyMapping columnObjectName="Projection_1" columnName="REFDOCNO"/>
+    </attribute>
+    <attribute id="DOCNO" order="75" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOCNO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="DOCNO"/>
+    </attribute>
+    <attribute id="ZGERNR" order="76" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZGERNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZGERNR"/>
+    </attribute>
+    <attribute id="ZZEQUNR" order="77" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZZEQUNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZEQUNR"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="NTGEW" order="66" aggregationType="sum" measureType="simple">
+    <measure id="NTGEW" order="78" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="NTGEW"/>
       <measureMapping columnObjectName="Projection_1" columnName="NTGEW"/>
     </measure>
-    <measure id="VERPR" order="67" aggregationType="sum" measureType="simple">
+    <measure id="VERPR" order="79" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="VERPR"/>
       <measureMapping columnObjectName="Projection_1" columnName="VERPR"/>
     </measure>
-    <measure id="LABST" order="68" aggregationType="sum" measureType="simple">
+    <measure id="LABST" order="80" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="LABST"/>
       <measureMapping columnObjectName="Projection_1" columnName="LABST"/>
     </measure>
-    <measure id="UMLME" order="69" aggregationType="sum" measureType="simple">
+    <measure id="UMLME" order="81" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="UMLME"/>
       <measureMapping columnObjectName="Projection_1" columnName="UMLME"/>
     </measure>
-    <measure id="EINME" order="70" aggregationType="sum" measureType="simple">
+    <measure id="EINME" order="82" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="EINME"/>
       <measureMapping columnObjectName="Projection_1" columnName="EINME"/>
     </measure>
-    <measure id="INSME" order="71" aggregationType="sum" measureType="simple">
+    <measure id="INSME" order="83" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="INSME"/>
       <measureMapping columnObjectName="Projection_1" columnName="INSME"/>
     </measure>
-    <measure id="SPEME" order="72" aggregationType="sum" measureType="simple">
+    <measure id="SPEME" order="84" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="SPEME"/>
       <measureMapping columnObjectName="Projection_1" columnName="SPEME"/>
     </measure>
-    <measure id="RETME" order="73" aggregationType="sum" measureType="simple">
+    <measure id="RETME" order="85" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="RETME"/>
       <measureMapping columnObjectName="Projection_1" columnName="RETME"/>
     </measure>
-    <measure id="STPRS" order="74" aggregationType="sum" measureType="simple">
+    <measure id="STPRS" order="86" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="STPRS"/>
       <measureMapping columnObjectName="Projection_1" columnName="STPRS"/>
     </measure>
-    <measure id="LFIMG" order="75" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="LFIMG"/>
-      <measureMapping columnObjectName="Projection_1" columnName="LFIMG"/>
+    <measure id="PEINH" order="87" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="PEINH"/>
+      <measureMapping columnObjectName="Projection_1" columnName="PEINH"/>
     </measure>
-  
-    <measure id="Datediff" order="79" aggregationType="sum" measureType="simple">
+    <measure id="SALK3" order="88" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="SALK3"/>
+      <measureMapping columnObjectName="Projection_1" columnName="SALK3"/>
+    </measure>
+    <measure id="LBKUM" order="89" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="LBKUM"/>
+      <measureMapping columnObjectName="Projection_1" columnName="LBKUM"/>
+    </measure>
+    <measure id="Datediff" order="90" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="Datediff"/>
       <measureMapping columnObjectName="Projection_1" columnName="Datediff"/>
     </measure>
@@ -445,12 +479,11 @@
 <layout>
   <shapes>
     <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
-      <upperLeftCorner x="92" y="112"/>
-    
-      <rectangleSize width="160"/>
+      <upperLeftCorner x="40" y="85"/>
     </shape>
+  
     <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="68" y="206"/>
+      <upperLeftCorner x="100" y="227"/>
       <rectangleSize height="30" width="160"/>
     </shape>
   </shapes>

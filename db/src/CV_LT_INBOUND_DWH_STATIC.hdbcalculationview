@@ -93,6 +93,9 @@
       <viewAttribute id="ZREQDAT"/>
     
       <viewAttribute id="Datediff"/>
+    
+      <viewAttribute id="REFDOCCAT"/>
+      <viewAttribute id="REFDOCNO"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_TABLE1"/>
@@ -381,6 +384,15 @@
     <attribute id="ZREQDAT" order="78" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZREQDAT"/>
       <keyMapping columnObjectName="Projection_1" columnName="ZREQDAT"/>
+    </attribute>
+  
+    <attribute id="REFDOCCAT" order="80" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCCAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REFDOCCAT"/>
+    </attribute>
+    <attribute id="REFDOCNO" order="81" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCNO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="REFDOCNO"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

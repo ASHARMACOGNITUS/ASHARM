@@ -1,27 +1,3 @@
 view "V_ZCV_AUSP" AS
 Select 
-"OBJEK"
-,concat(concat(concat(concat(concat(Concat("1",'='),"2"),','),"3"),'='),"DESC") AS "SAPCharacteristics"
-,"KLART"
-From 
-(Select "OBJEK"
-,"KLART"
-,"1"
-,"2"
-,"3"
-,String_agg("4",','order by "4" ASC)   AS "DESC"
-from 
-(select
-"OBJEK"
-,"KLART"
-,SUBSTR_REGEXPR('(.+)\=(.+)\,(.+)\=(.+)' IN  "SAPCharacteristics" GROUP 1 ) AS "1" 
-,SUBSTR_REGEXPR('(.+)\=(.+)\,(.+)\=(.+)' IN  "SAPCharacteristics" GROUP 2 ) AS "2"
-,SUBSTR_REGEXPR('(.+)\=(.+)\,(.+)\=(.+)' IN  "SAPCharacteristics" GROUP 3 ) AS "3"
-,SUBSTR_REGEXPR('(.+)\=(.+)\,(.+)\=(.+)' IN  "SAPCharacteristics" GROUP 4 ) AS "4"
-from "ZCV_AUSP" ) XYZ
-Group by "OBJEK"
-,"KLART"
-,"1"
-,"2"
-,"3"
-) ABC 
+* from v_TEST
