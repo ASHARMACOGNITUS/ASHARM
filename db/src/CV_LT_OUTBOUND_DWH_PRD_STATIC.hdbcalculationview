@@ -106,6 +106,10 @@
       <viewAttribute id="PEINH"/>
       <viewAttribute id="SALK3"/>
       <viewAttribute id="LBKUM"/>
+    
+      <viewAttribute id="REFDOCCAT"/>
+      <viewAttribute id="REFDOCNO"/>
+      <viewAttribute id="DOCNO"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_OUTBOUND_DWH_PRD_STATIC"/>
@@ -420,6 +424,19 @@
     <attribute id="ZSERNR" order="85" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZSERNR"/>
       <keyMapping columnObjectName="OUTBOUND" columnName="ZSERNR"/>
+    </attribute>
+  
+    <attribute id="REFDOCCAT" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCCAT"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="REFDOCCAT"/>
+    </attribute>
+    <attribute id="REFDOCNO" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCNO"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="REFDOCNO"/>
+    </attribute>
+    <attribute id="DOCNO" order="91" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOCNO"/>
+      <keyMapping columnObjectName="OUTBOUND" columnName="DOCNO"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>

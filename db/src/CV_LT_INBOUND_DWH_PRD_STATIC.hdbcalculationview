@@ -104,6 +104,11 @@
       <viewAttribute id="PEINH"/>
       <viewAttribute id="SALK3"/>
       <viewAttribute id="LBKUM"/>
+    
+      <viewAttribute id="REFDOCCAT"/>
+      <viewAttribute id="REFDOCNO"/>
+    
+      <viewAttribute id="DOCNO"/>
     </viewAttributes>
     <calculatedViewAttributes/>
     <input node="ZCV_LT_INBOUND_DWH_PRD_STATIC"/>
@@ -421,6 +426,19 @@
     <attribute id="ZZEQUNR" order="84" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ZZEQUNR"/>
       <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="ZZEQUNR"/>
+    </attribute>
+  
+    <attribute id="REFDOCCAT" order="88" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCCAT"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="REFDOCCAT"/>
+    </attribute>
+    <attribute id="REFDOCNO" order="89" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REFDOCNO"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="REFDOCNO"/>
+    </attribute>
+    <attribute id="DOCNO" order="90" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DOCNO"/>
+      <keyMapping columnObjectName="INBOUND_STATIC_TABLE" columnName="DOCNO"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
