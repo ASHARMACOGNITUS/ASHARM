@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="CV_GIFTCARD_STATIC" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="CV_GIFTCARD_STATIC.hdbcalculationview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ZCV_Billing">
+    <resourceUri>ZCV_Billing</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="VBELN"/>
+      <viewAttribute id="VKORG_AUFT"/>
+      <viewAttribute id="SPART"/>
+      <viewAttribute id="ZZGIFT_COD"/>
+      <viewAttribute id="ZZMER_ID"/>
+      <viewAttribute id="ZZORDER_ID"/>
+      <viewAttribute id="ZZPROD_TYP"/>
+      <viewAttribute id="ZZPROD_SKU"/>
+      <viewAttribute id="FKIMG"/>
+      <viewAttribute id="FKDAT"/>
+      <viewAttribute id="NETWR"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ZCV_Billing"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Projection_1">
+  <attributes>
+    <attribute id="VBELN" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RMA number"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
+    </attribute>
+    <attribute id="VKORG_AUFT" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales organization"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VKORG_AUFT"/>
+    </attribute>
+    <attribute id="SPART" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Division"/>
+      <keyMapping columnObjectName="Projection_1" columnName="SPART"/>
+    </attribute>
+    <attribute id="ZZGIFT_COD" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Gift Card number"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZGIFT_COD"/>
+    </attribute>
+    <attribute id="ZZMER_ID" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Merchant ID"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZMER_ID"/>
+    </attribute>
+    <attribute id="ZZORDER_ID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Order serial number"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZORDER_ID"/>
+    </attribute>
+    <attribute id="ZZPROD_TYP" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Product type "/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZPROD_TYP"/>
+    </attribute>
+    <attribute id="ZZPROD_SKU" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Product SKU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZPROD_SKU"/>
+    </attribute>
+    <attribute id="FKDAT" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Invoice date"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FKDAT"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="FKIMG" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Billing Quantity"/>
+      <measureMapping columnObjectName="Projection_1" columnName="FKIMG"/>
+    </measure>
+    <measure id="NETWR" order="11" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="RMA"/>
+      <measureMapping columnObjectName="Projection_1" columnName="NETWR"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="20" y="226"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
