@@ -4,77 +4,242 @@
 <localVariables/>
 <variableMappings/>
 <dataSources>
-  <DataSource id="ZCV_Billing">
-    <resourceUri>ZCV_Billing</resourceUri>
+  <DataSource id="ZCV_GIFTCARD_STATIC">
+    <resourceUri>ZCV_GIFTCARD_STATIC</resourceUri>
   </DataSource>
 </dataSources>
 <calculationViews>
   <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
     <viewAttributes>
+      <viewAttribute id="NAME1"/>
+      <viewAttribute id="ADRNR"/>
+      <viewAttribute id="NAME1_1"/>
+      <viewAttribute id="NAME2"/>
+      <viewAttribute id="NAME3"/>
+      <viewAttribute id="CITY1"/>
+      <viewAttribute id="POSTCODE1"/>
       <viewAttribute id="VBELN"/>
-      <viewAttribute id="VKORG_AUFT"/>
-      <viewAttribute id="SPART"/>
-      <viewAttribute id="ZZGIFT_COD"/>
-      <viewAttribute id="ZZMER_ID"/>
-      <viewAttribute id="ZZORDER_ID"/>
-      <viewAttribute id="ZZPROD_TYP"/>
-      <viewAttribute id="ZZPROD_SKU"/>
-      <viewAttribute id="FKIMG"/>
       <viewAttribute id="FKDAT"/>
+      <viewAttribute id="KNUMV"/>
+      <viewAttribute id="KUNAG"/>
+      <viewAttribute id="KUNRG"/>
+      <viewAttribute id="RFBSK"/>
+      <viewAttribute id="VGTYP"/>
+      <viewAttribute id="MATNR"/>
+      <viewAttribute id="POSNR"/>
+      <viewAttribute id="KNTYP"/>
+      <viewAttribute id="WAERS"/>
+      <viewAttribute id="KAPPL"/>
+      <viewAttribute id="KSCHL"/>
+      <viewAttribute id="PRODH"/>
+      <viewAttribute id="ZZPRODSKU"/>
+      <viewAttribute id="ZZOTHPROMO"/>
+      <viewAttribute id="ZZPRODTYP"/>
+      <viewAttribute id="FKART"/>
+      <viewAttribute id="FKTYP"/>
+      <viewAttribute id="VKORG"/>
+      <viewAttribute id="VTWEG"/>
+      <viewAttribute id="BELNR"/>
+      <viewAttribute id="UEPOS"/>
+      <viewAttribute id="AUBEL"/>
+      <viewAttribute id="AUPOS"/>
+      <viewAttribute id="MATKL"/>
+      <viewAttribute id="PSTYV"/>
+      <viewAttribute id="ERDAT"/>
+      <viewAttribute id="AUART"/>
+      <viewAttribute id="KDMAT"/>
+      <viewAttribute id="ARKTX"/>
+      <viewAttribute id="BUKRS"/>
       <viewAttribute id="NETWR"/>
+      <viewAttribute id="FKIMG"/>
+      <viewAttribute id="KBETR"/>
+      <viewAttribute id="KWERT"/>
+      <viewAttribute id="NETWR_1"/>
     </viewAttributes>
     <calculatedViewAttributes/>
-    <input node="ZCV_Billing"/>
+    <input node="ZCV_GIFTCARD_STATIC"/>
   </calculationView>
 </calculationViews>
 <logicalModel id="Projection_1">
   <attributes>
-    <attribute id="VBELN" order="1" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="RMA number"/>
+    <attribute id="NAME1" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAME1"/>
+    </attribute>
+    <attribute id="ADRNR" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADRNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ADRNR"/>
+    </attribute>
+    <attribute id="NAME1_1" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME1_1"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAME1_1"/>
+    </attribute>
+    <attribute id="NAME2" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME2"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAME2"/>
+    </attribute>
+    <attribute id="NAME3" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME3"/>
+      <keyMapping columnObjectName="Projection_1" columnName="NAME3"/>
+    </attribute>
+    <attribute id="CITY1" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY1"/>
+      <keyMapping columnObjectName="Projection_1" columnName="CITY1"/>
+    </attribute>
+    <attribute id="POSTCODE1" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSTCODE1"/>
+      <keyMapping columnObjectName="Projection_1" columnName="POSTCODE1"/>
+    </attribute>
+    <attribute id="VBELN" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VBELN"/>
       <keyMapping columnObjectName="Projection_1" columnName="VBELN"/>
     </attribute>
-    <attribute id="VKORG_AUFT" order="2" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Sales organization"/>
-      <keyMapping columnObjectName="Projection_1" columnName="VKORG_AUFT"/>
-    </attribute>
-    <attribute id="SPART" order="3" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Division"/>
-      <keyMapping columnObjectName="Projection_1" columnName="SPART"/>
-    </attribute>
-    <attribute id="ZZGIFT_COD" order="4" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Gift Card number"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZZGIFT_COD"/>
-    </attribute>
-    <attribute id="ZZMER_ID" order="5" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Merchant ID"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZZMER_ID"/>
-    </attribute>
-    <attribute id="ZZORDER_ID" order="6" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Order serial number"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZZORDER_ID"/>
-    </attribute>
-    <attribute id="ZZPROD_TYP" order="7" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Product type "/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZZPROD_TYP"/>
-    </attribute>
-    <attribute id="ZZPROD_SKU" order="8" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Product SKU"/>
-      <keyMapping columnObjectName="Projection_1" columnName="ZZPROD_SKU"/>
-    </attribute>
-    <attribute id="FKDAT" order="10" displayAttribute="false" attributeHierarchyActive="false">
-      <descriptions defaultDescription="Invoice date"/>
+    <attribute id="FKDAT" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKDAT"/>
       <keyMapping columnObjectName="Projection_1" columnName="FKDAT"/>
+    </attribute>
+    <attribute id="KNUMV" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNUMV"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KNUMV"/>
+    </attribute>
+    <attribute id="KUNAG" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNAG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KUNAG"/>
+    </attribute>
+    <attribute id="KUNRG" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KUNRG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KUNRG"/>
+    </attribute>
+    <attribute id="RFBSK" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RFBSK"/>
+      <keyMapping columnObjectName="Projection_1" columnName="RFBSK"/>
+    </attribute>
+    <attribute id="VGTYP" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VGTYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VGTYP"/>
+    </attribute>
+    <attribute id="MATNR" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MATNR"/>
+    </attribute>
+    <attribute id="POSNR" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="POSNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="POSNR"/>
+    </attribute>
+    <attribute id="KNTYP" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KNTYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KNTYP"/>
+    </attribute>
+    <attribute id="WAERS" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WAERS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="WAERS"/>
+    </attribute>
+    <attribute id="KAPPL" order="19" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KAPPL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KAPPL"/>
+    </attribute>
+    <attribute id="KSCHL" order="20" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KSCHL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KSCHL"/>
+    </attribute>
+    <attribute id="PRODH" order="21" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODH"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PRODH"/>
+    </attribute>
+    <attribute id="ZZPRODSKU" order="22" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZZPRODSKU"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZPRODSKU"/>
+    </attribute>
+    <attribute id="ZZOTHPROMO" order="23" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZZOTHPROMO"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZOTHPROMO"/>
+    </attribute>
+    <attribute id="ZZPRODTYP" order="24" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ZZPRODTYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ZZPRODTYP"/>
+    </attribute>
+    <attribute id="FKART" order="25" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKART"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FKART"/>
+    </attribute>
+    <attribute id="FKTYP" order="26" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="FKTYP"/>
+      <keyMapping columnObjectName="Projection_1" columnName="FKTYP"/>
+    </attribute>
+    <attribute id="VKORG" order="27" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VKORG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VKORG"/>
+    </attribute>
+    <attribute id="VTWEG" order="28" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="VTWEG"/>
+      <keyMapping columnObjectName="Projection_1" columnName="VTWEG"/>
+    </attribute>
+    <attribute id="BELNR" order="29" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BELNR"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BELNR"/>
+    </attribute>
+    <attribute id="UEPOS" order="30" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="UEPOS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="UEPOS"/>
+    </attribute>
+    <attribute id="AUBEL" order="31" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUBEL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="AUBEL"/>
+    </attribute>
+    <attribute id="AUPOS" order="32" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUPOS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="AUPOS"/>
+    </attribute>
+    <attribute id="MATKL" order="33" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATKL"/>
+      <keyMapping columnObjectName="Projection_1" columnName="MATKL"/>
+    </attribute>
+    <attribute id="PSTYV" order="34" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PSTYV"/>
+      <keyMapping columnObjectName="Projection_1" columnName="PSTYV"/>
+    </attribute>
+    <attribute id="ERDAT" order="35" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ERDAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ERDAT"/>
+    </attribute>
+    <attribute id="AUART" order="36" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AUART"/>
+      <keyMapping columnObjectName="Projection_1" columnName="AUART"/>
+    </attribute>
+    <attribute id="KDMAT" order="37" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="KDMAT"/>
+      <keyMapping columnObjectName="Projection_1" columnName="KDMAT"/>
+    </attribute>
+    <attribute id="ARKTX" order="38" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ARKTX"/>
+      <keyMapping columnObjectName="Projection_1" columnName="ARKTX"/>
+    </attribute>
+    <attribute id="BUKRS" order="39" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="BUKRS"/>
+      <keyMapping columnObjectName="Projection_1" columnName="BUKRS"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="FKIMG" order="9" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="Billing Quantity"/>
+    <measure id="NETWR" order="40" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NETWR"/>
+      <measureMapping columnObjectName="Projection_1" columnName="NETWR"/>
+    </measure>
+    <measure id="FKIMG" order="41" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="FKIMG"/>
       <measureMapping columnObjectName="Projection_1" columnName="FKIMG"/>
     </measure>
-    <measure id="NETWR" order="11" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="RMA"/>
-      <measureMapping columnObjectName="Projection_1" columnName="NETWR"/>
+    <measure id="KBETR" order="42" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="KBETR"/>
+      <measureMapping columnObjectName="Projection_1" columnName="KBETR"/>
+    </measure>
+    <measure id="KWERT" order="43" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="KWERT"/>
+      <measureMapping columnObjectName="Projection_1" columnName="KWERT"/>
+    </measure>
+    <measure id="NETWR_1" order="44" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="NETWR_1"/>
+      <measureMapping columnObjectName="Projection_1" columnName="NETWR_1"/>
     </measure>
   </baseMeasures>
   <calculatedMeasures/>
@@ -87,7 +252,7 @@
       <upperLeftCorner x="40" y="85"/>
     </shape>
     <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
-      <upperLeftCorner x="20" y="226"/>
+      <upperLeftCorner x="33" y="228"/>
       <rectangleSize height="30" width="160"/>
     </shape>
   </shapes>
